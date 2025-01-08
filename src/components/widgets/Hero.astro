@@ -1,6 +1,6 @@
 ---
 import Image from '~/components/common/Image.astro';
-import Button from '~/components/ui/Button.astro';
+/*import Button from '~/components/ui/Button.astro';*/
 
 import type { Hero as Props } from '~/types';
 
@@ -10,7 +10,7 @@ const {
   tagline,
 
   content = await Astro.slots.render('content'),
-  actions = await Astro.slots.render('actions'),
+  /*actions = await Astro.slots.render('actions'),*/
   image = await Astro.slots.render('image'),
 
   id,
@@ -54,7 +54,8 @@ const {
             )
           }
           {
-            actions && (
+           /*
+           actions && (
               <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
                 {Array.isArray(actions) ? (
                   actions.map((action) => (
@@ -66,7 +67,7 @@ const {
                   <Fragment set:html={actions} />
                 )}
               </div>
-            )
+            )*/
           }
         </div>
         {content && <Fragment set:html={content} />}
